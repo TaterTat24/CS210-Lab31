@@ -1,7 +1,7 @@
 /** lab31-1.c
 * ===========================================================
-* Name: FIRST LAST, DATE
-* Section: SECTION
+* Name: Benjamin Tat
+* Section: T6
 * Project: Lab 31
 * ===========================================================  */
 
@@ -17,7 +17,7 @@ int main() {
     int base = 2;
     for (int i = 0; i <= 10; ++i) {
         printf("%d^%d = %d\n", base, i, powerN(base, i));
-    }    
+    }
     
     return 0;
 }

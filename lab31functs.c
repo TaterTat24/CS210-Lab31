@@ -6,8 +6,8 @@
 * ===========================================================  */
 
 #include "lab31functs.h"
+#include <string.h>
 #include <math.h>
-
 
 /** ----------------------------------------------------------
  * @fn int powerN(int base, int exp)
@@ -18,8 +18,12 @@
  * ----------------------------------------------------------
  */
 int powerN(int base, int exp) {
-
-    return 0;
+    if (exp == 0){
+        return 1;
+    }
+    else {
+        return base * powerN(base, exp - 1);
+    }
 }
 
 /** ----------------------------------------------------------
@@ -31,8 +35,17 @@ int powerN(int base, int exp) {
  * ----------------------------------------------------------
  */
 int count_char(char str[], char c) {
-
-    return 0;
+    if (str[0] == '\0'){
+        return 0;
+    }
+    else {
+        if (str[0] == c) {
+            return 1 + count_char(&str[1], c);
+        }
+        else {
+            return 0 + count_char(&str[1], c);
+        }
+    }
 }
 
 /** ----------------------------------------------------------
@@ -45,6 +58,15 @@ int count_char(char str[], char c) {
  * ----------------------------------------------------------
  */
 int count_num(int array[], int x, int len) {
+    if (strlen(array) == 0) {
+        return 0;
+    }
+    else {
+        if () {
+            /* code */
+        }
+        
+    }
 
     return 0;
 }
