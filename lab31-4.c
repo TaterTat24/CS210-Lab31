@@ -23,7 +23,7 @@ int main() {
                          "culpa qui officia deserunt mollit anim id est laborum.";
 
     // Call reverse_print() with the exampleText character array to complete this exercise.
-
+    reverse_print(exampleText);
 
     return 0;
 }

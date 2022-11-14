@@ -1,7 +1,7 @@
 /** lab31functs.c
 * ===========================================================
-* Name: FIRST LAST, DATE
-* Section: SECTION
+* Name: Benjamin Tat
+* Section: T6
 * Project: Lab 31
 * ===========================================================  */
 
@@ -58,17 +58,17 @@ int count_char(char str[], char c) {
  * ----------------------------------------------------------
  */
 int count_num(int array[], int x, int len) {
-    if (strlen(array) == 0) {
+    if (len == 0) {
         return 0;
     }
     else {
-        if () {
-            /* code */
+        if (array[0] == x) {
+            return 1 + count_num(&array[1], x, len-1);
         }
-        
+        else {
+            return 0 + count_num(&array[1], x, len-1);
+        }
     }
-
-    return 0;
 }
 
 /** ----------------------------------------------------------
@@ -79,8 +79,13 @@ int count_num(int array[], int x, int len) {
  * ----------------------------------------------------------
  */
 void reverse_print(char str[]) {
-
-    // TODO:  Add Your Code Here
+    if (str[0] == '\0') {
+        return;
+    }
+    else {
+        reverse_print(&str[1]);
+        printf("%c", str[0]);
+    }
 }
 
 /** ----------------------------------------------------------
@@ -91,6 +96,13 @@ void reverse_print(char str[]) {
  * ----------------------------------------------------------
  */
  int fibonacci(int N) {
-    
-    return 0;
+    if (N == 0) {
+        return 0;
+    }
+    if (N == 1) {
+        return 1;
+    }
+    else {
+        return fibonacci(N-1) + fibonacci(N-2);
+    }
  }
