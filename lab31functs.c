@@ -62,7 +62,7 @@ int count_num(int array[], int x, int len) {
         return 0;
     }
     else {
-        if (array[0] == x) {
+        if (array[0] == x) {    
             return 1 + count_num(&array[1], x, len-1);
         }
         else {
